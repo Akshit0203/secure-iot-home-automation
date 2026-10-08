@@ -46,6 +46,20 @@ Automation decisions run **locally on the edge** (low latency, works offline). C
 
 > Developed as an academic research project, *"A Synchronised Home Automation Framework using IoT Ecosystem Primitives"*. The full report is in [`docs/report/`](docs/report/Project-Report.pdf).
 
+----
+
+## Results & Screenshots
+
+| Weather & AQI dashboard on Raspberry Pi 5 | Blynk IoT console (ESP32 node) |
+|:--:|:--:|
+| ![Weather dashboard](docs/images/weather-dashboard-rpi5.png) | ![Blynk console](docs/images/blynk-console-device.png) |
+| **Blynk web dashboard builder** | **ESP32 connected to Blynk Cloud** |
+| ![Blynk dashboard](docs/images/blynk-web-dashboard.png) | ![ESP32 serial](docs/images/esp32-blynk-serial-connected.png) |
+| **Arduino UNO R4 LDR + relay night-light** | **DHT11 wiring to Raspberry Pi** |
+| ![LDR relay](docs/images/arduino-ldr-relay-hardware.jpg) | ![DHT11 wiring](docs/images/rpi-dht11-wiring.png) |
+
+Demo video (weather dashboard on Raspberry Pi 5 with voice output): [Google Drive](https://drive.google.com/file/d/1SpxVv6I_7b54BaND9MVmHZPXkyd2Umaw/view)
+
 ---
 
 ## Key Features
@@ -246,20 +260,6 @@ Security was a core requirement, not an afterthought. Summary of the controls (f
 | Eavesdropping on the IoT link | ESP32 ↔ Blynk over **TLS** (`BlynkSimpleEsp32_SSL.h`), SMTPS with certificate verification |
 | Alert flooding / DoS of inbox | Per-event cooldown rate limiter |
 | Unsafe failure states | Actuators default **OFF** at boot and on exit (`GPIO.cleanup`), 1 KB request limit |
-
----
-
-## Results & Screenshots
-
-| Weather & AQI dashboard on Raspberry Pi 5 | Blynk IoT console (ESP32 node) |
-|:--:|:--:|
-| ![Weather dashboard](docs/images/weather-dashboard-rpi5.png) | ![Blynk console](docs/images/blynk-console-device.png) |
-| **Blynk web dashboard builder** | **ESP32 connected to Blynk Cloud** |
-| ![Blynk dashboard](docs/images/blynk-web-dashboard.png) | ![ESP32 serial](docs/images/esp32-blynk-serial-connected.png) |
-| **Arduino UNO R4 LDR + relay night-light** | **DHT11 wiring to Raspberry Pi** |
-| ![LDR relay](docs/images/arduino-ldr-relay-hardware.jpg) | ![DHT11 wiring](docs/images/rpi-dht11-wiring.png) |
-
-Demo video (weather dashboard on Raspberry Pi 5 with voice output): [Google Drive](https://drive.google.com/file/d/1SpxVv6I_7b54BaND9MVmHZPXkyd2Umaw/view)
 
 ---
 
