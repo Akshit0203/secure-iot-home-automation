@@ -1,4 +1,0 @@
-# Hardware-free tooling used by CI (tests never import cv2, dlib, picamera2 or lgpio)
-pytest>=8.0
-ruff>=0.6
-python-dotenv>=1.0
