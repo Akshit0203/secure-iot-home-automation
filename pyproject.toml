@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "smart-door"
+version = "1.0.0"
+description = "AI-powered smart door security & IoT monitoring system for Raspberry Pi 5 (face recognition, ultrasonic door sensing, GPIO alarms, SMTP alerts)"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Akshit" }]
+requires-python = ">=3.11"
+keywords = ["raspberry-pi", "face-recognition", "iot", "home-security", "opencv", "gpio"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: POSIX :: Linux",
+    "Topic :: Home Automation",
+    "Topic :: Scientific/Engineering :: Image Recognition",
+]
+
+[project.scripts]
+smart-door = "smart_door.__main__:main"
+smart-door-capture = "smart_door.capture:main"
+smart-door-train = "smart_door.train:main"
+smart-door-test-email = "smart_door.notifier:main"
+
+[tool.setuptools]
+packages = ["smart_door"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+addopts = "-ra"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP"]

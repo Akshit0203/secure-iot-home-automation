@@ -1,0 +1,29 @@
+# systemd unit - run the smart door system headless at boot.
+#
+#   sudo cp deploy/smart-door.service /etc/systemd/system/
+#   sudo systemctl daemon-reload
+#   sudo systemctl enable --now smart-door
+#   journalctl -u smart-door -f
+#
+# Adjust User and paths if your username / clone location differ.
+
+[Unit]
+Description=AI Smart Door Security System
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=pi
+Group=pi
+SupplementaryGroups=gpio video
+WorkingDirectory=/home/pi/AI-Powered-Smart-Door-Security-IoT-Monitoring-System
+ExecStart=/home/pi/AI-Powered-Smart-Door-Security-IoT-Monitoring-System/.venv/bin/python -m smart_door --headless
+Restart=on-failure
+RestartSec=5
+KillSignal=SIGTERM
+TimeoutStopSec=15
+Environment=PYTHONUNBUFFERED=1
+
+[Install]
+WantedBy=multi-user.target
