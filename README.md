@@ -58,7 +58,9 @@ Automation decisions run **locally on the edge** (low latency, works offline). C
 | **Arduino UNO R4 LDR + relay night-light** | **DHT11 wiring to Raspberry Pi** |
 | ![LDR relay](docs/images/arduino-ldr-relay-hardware.jpg) | ![DHT11 wiring](docs/images/rpi-dht11-wiring.png) |
 
-Demo video (weather dashboard on Raspberry Pi 5 with voice output): [Google Drive](https://drive.google.com/file/d/1SpxVv6I_7b54BaND9MVmHZPXkyd2Umaw/view)
+## Demo video (weather dashboard on Raspberry Pi 5 with voice output):
+<video src="https://github.com/user-attachments/assets/faf3f058-8868-4b76-a880-5b66b208e583" width="100%" controls></video>
+<br>
 
 ---
 
