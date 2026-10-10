@@ -59,7 +59,7 @@ Automation decisions run **locally on the edge** (low latency, works offline). C
 | ![LDR relay](docs/images/arduino-ldr-relay-hardware.jpg) | ![DHT11 wiring](docs/images/rpi-dht11-wiring.png) |
 
 ## Demo video (weather dashboard on Raspberry Pi 5 with voice output):
-<video src="https://github.com/user-attachments/assets/faf3f058-8868-4b76-a880-5b66b208e583" width="100%" controls></video>
+<video src="https://github.com/user-attachments/assets/844bd268-8d49-4e57-aaf2-7e0fac2ecc54" width="100%" controls></video>
 <br>
 
 ---
